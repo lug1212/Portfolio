@@ -78,6 +78,12 @@ body{
   transition: all 0.2s ease-in-out;
   flex-wrap: wrap;
 }
+.nav-title {
+  display: none;
+  color: #ffeccc;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
 .left-header a:hover {
   border-radius: 15%;
   background-color: #141414;
@@ -186,6 +192,13 @@ body{
   text-decoration: none;
   padding: 1rem;
 }
+.icon{
+  display: none;
+  color: #141414;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 
 /* =========================
    Home page
@@ -336,7 +349,87 @@ img { max-width: 100%; height: auto; display: block; }
   margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0);
   white-space: nowrap; border: 0;
 }
+/* =========================
+   Start: Mobile responsiveness
+   ========================= */
+@media (max-width: 768px) {
+  /* Header and Navigation adjustments */
+  .icon{
+    display: block;
+  }
+  .nav-title {
+    display: block;
+    font-size: 45px;
+  }
+  .header {
+    position: static;
+    flex-direction: row;
+    align-items: center;
+  } 
+  .left-header {
+    z-index: 10;
+    position: absolute;
+    top: 150px;
+    right: 0;
+    height: 300vh;
+    background-color: #141414;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 1rem;
+  }
 
+  .left-header a {
+    font-size: 40px;
+    margin: 20px 0;
+  }
+  /* Header and Navigation adjustments END */
+  /* Container adjustments */
+  .container {
+    position: absolute;
+    right: 0;
+    height: auto;
+  }
+  .about-me{ 
+    display: flex;
+    position: absolute;
+    top: 500px;
+    right: 0;
+    margin: 1rem 0;
+    text-indent: 0;
+    max-width: 100%;
+    text-align: center;
+  }
+  .profile  {
+    display: flex;
+    position: absolute;
+    top: 0px;
+    left: 3rem;
+    width: fit-content;
+  }
+  .profile img{
+    height: 35vh;
+  }
+  
+  .cta{
+    position: absolute;
+    right: 0;
+    left: 0;
+    gap: 20px;
+    top: 120vh;
+  }
+  .cta .btn{
+    font-size: 25px;
+    padding: 0.5rem 1rem;
+  }
+  .linkss {
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 150vh;
+  }
+}
 /* =========================
    End: page-specific defaults filled
    ========================= */

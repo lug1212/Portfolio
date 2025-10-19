@@ -28,3 +28,17 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("logoRotation", targetRotation);
   }, 25);
 });
+function toggleMenu() {
+  const header = document.querySelector(".left-header");
+  const icon = document.querySelector(".icon");
+  if (header.style.display === "flex") {
+    header.style.transition = "display 0.5s ease";
+    header.style.display = "none";
+    icon.style.transition = "transform 0.25s ease-in-out";
+    icon.style.transform = "rotate(0deg)";
+  } else {
+    header.style.display = "flex";
+    icon.style.transition = "transform 0.25s ease-in-out";
+    icon.style.transform = "rotate(90deg) scale(1.2)";
+  }
+}
