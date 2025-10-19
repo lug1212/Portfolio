@@ -1,0 +1,381 @@
+/* =========================
+   Global
+   ========================= */
+html{
+  height: 100%;
+  text-decoration: none;
+  transition: transform 0.5s ease;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: #141414;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  color: #ffeccc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================
+   Scrollbar
+   ========================= */
+::-webkit-scrollbar { width: 2px; }
+::-webkit-scrollbar-thumb {
+  background-color: #ffeccc;
+  border-radius: 10px;
+}
+
+/* =========================
+   Header and Navigation (affects all pages)
+   ========================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffea5e;
+  padding: 10px 20px;
+  border-bottom: 5px solid #141414;
+}
+.header a{
+  padding: 15px;
+  max-height: fit-content;
+  text-decoration: none;
+}
+.header a img{
+  max-height: 75px;
+  padding: 5px;
+  display: block;
+}
+.header .logo {
+  display: inline-block;
+  transform-origin: center center;
+}
+.site-title {
+  font-size: 40px;
+  color: #141414;
+  margin: 0;
+}
+
+/* Navigation links (left-header) */
+.left-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.left-header a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a40;
+  font-size: 20px;
+  color: #ffeccc;
+  font-weight: bold;
+  margin: 10px;
+  border-radius: 7%;
+  padding: 15px;
+  transition: all 0.2s ease-in-out;
+}
+.left-header a:hover {
+  border-radius: 15%;
+  background-color: #141414;
+  transition: 0.25s ease;
+}
+
+/* =========================
+   Layout wrappers and utility containers
+   ========================= */
+.container {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  gap: 20px;
+}
+
+/* Projects page wrapper (shared styles) */
+.projects-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+.projects-body h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+/* =========================
+   Projects grid and cards
+   ========================= */
+.projectss {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.projectss > div {
+  background: #ffea5e;
+  color: #141414;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  padding: 1rem;
+}
+.projectss > div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.projectss > div img {
+  height: 250px;
+  padding: 25px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* responsive breakpoints for projects grid */
+@media (max-width: 900px) {
+  .projectss { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .projectss { grid-template-columns: 1fr; }
+}
+
+/* =========================
+   Footer and link groups (affects all pages)
+   ========================= */
+.footer {
+  color: #ffeccc;
+  margin-top: 100px;
+  height: 100px;
+  padding: 10px;
+}
+.linkss {
+  justify-content: center;
+  padding: 2.5%;
+  display: flex;
+  position: relative;
+  top: 200px;
+  flex-direction: row;
+  gap: 50px;
+  text-align: center;
+}
+.linkss a {
+  font-size: 20px;
+  color: #ffeccc;
+  text-decoration: none;
+}
+.linkzz {
+  color: #ffeccc;
+  text-decoration: none;
+  font-size: 25px;
+}
+.linkzz a {
+  color: #ffeccc;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+/* =========================
+   Home page
+   ========================= */
+.cta {
+  position: absolute;
+  right: 15%;
+  gap: 50px;
+  top: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.btn {
+  text-decoration: none;
+  color: #ffeccc;
+  background-color: #1a1a40;
+  padding: 1rem;
+  border-radius: 8px;
+  border: solid #ffea5e 2px;
+  transition: transform 0.1s ease, background-color 0.1s ease;
+}
+.btn:hover {
+  transform: translateY(-6px);
+  background-color: #cfc97e;
+}
+
+/* =========================
+   About / Profile
+   ========================= */
+.quote {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #ffeccc;
+  font-size: 25px;
+  max-width: 300px;
+  line-height: 1.4;
+}
+.profile {
+  position: absolute;
+  color: #ffeccc;
+  margin: 10px;
+  right: 65%;
+  border: 2px solid #ffea5e;
+  margin-top: 35px;
+}
+.profile img {
+  display: block;
+  max-width: 400px;
+  height: auto;
+}
+.about-me {
+  position: absolute;
+  color: #ffeccc;
+  display: flex;
+  flex-direction: column;
+  margin-left: 37%;
+  top: 150px;
+  height: fit-content;
+  max-width: 500px;
+  text-indent: 50px;
+}
+.about-me p {
+  font-size: 30px;
+  padding: 10px;
+}
+
+/* =========================
+   Contacts page
+   ========================= */
+.contacts {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: rgba(255,234,94,0.04);
+  border-radius: 8px;
+}
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background: rgba(255,234,94,0.06);
+  padding: 0.75rem;
+  border-radius: 6px;
+}
+.contact-item .label {
+  min-width: 120px;
+  font-weight: bold;
+  color: #ffeccc;
+}
+.contact-item .value {
+  color: #ffeccc;
+  word-break: break-word;
+}
+
+/* =========================
+   Projects page (extra helpers)
+   ========================= */
+.project-title {
+  font-size: 1.25rem;
+  margin: 0.5rem 0 0;
+  color: #141414;
+}
+.project-description {
+  font-size: 0.95rem;
+  color: rgba(20,20,20,0.9);
+  padding: 0.5rem 1rem 1rem;
+}
+.project-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.project-actions a {
+  text-decoration: none;
+  color: #141414;
+  background: rgba(20,20,20,0.06);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* =========================
+   Accessibility / Small polish
+   ========================= */
+a:focus, button:focus {
+  outline: 3px solid rgba(255,234,94,0.25);
+  outline-offset: 2px;
+}
+img { max-width: 100%; height: auto; display: block; }
+
+/* =========================
+   Utility helpers
+   ========================= */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hide-visually {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
+
+/* =========================
+   End: page-specific defaults filled
+   ========================= */
+/* About page extras */
+.about-cta {
+  margin-top: 1.5rem;
+  display: inline-flex;
+  gap: 1rem;
+}
+.about-cta .download-resume {
+  background: #1a1a40;
+  color: #ffeccc;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* Contacts page extras */
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255,234,94,0.12);
+  background: rgba(255,255,255,0.02);
+  color: #ffeccc;
+}
+
+/* Projects page extras (layout variants) */
+.projects-hero {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.project-card--highlight {
+  transform: scale(1.02);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.2);
+}
+
+/* End of stylesheet */

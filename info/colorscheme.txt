@@ -1,0 +1,20 @@
+#### 🌟 Main Colors
+| Color Name     | Hex       | Usage Suggestion                      |
+|----------------|-----------|---------------------------------------|
+| Soft Yellow    | `#ffea5e` | Primary highlights, buttons, headers  |
+| Charcoal Black | `#1f1c1c` | Backgrounds, containers, nav bars     |
+#### ✍️ Font Colors
+| Color Name     | Hex       | Usage Suggestion                      |
+|----------------|-----------|---------------------------------------|
+| Cream          | `#ffeccc` | Text on dark backgrounds              |
+| Graphite       | `#141414` | Text on light backgrounds             |
+#### 🧩 Accent Suggestions
+| Color Name     | Hex       | Usage Suggestion                      |
+|----------------|-----------|---------------------------------------|
+| Warm Gray      | `#a89f8f` | Subtext, muted labels                 |
+| Rust Red       | `#b84c3a` | Alerts, active links, badges          |
+| Olive Tint     | `#cfc97e` | Hover states, secondary highlights    |
+| Midnight Blue  | `#1a1a40` | Tabs, borders, modal overlays         |
+#### Font-Family
+| Name           |
+|
