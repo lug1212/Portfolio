@@ -418,16 +418,100 @@ img { max-width: 100%; height: auto; display: block; }
     left: 0;
     gap: 20px;
     top: 120vh;
+    margin-top: 5rem;
   }
   .cta .btn{
     font-size: 25px;
     padding: 0.5rem 1rem;
   }
   .linkss {
+    margin-top: 5rem;
     flex-direction: column;
     gap: 20px;
     position: absolute;
     top: 150vh;
+  }
+}
+@media (max-width: 430px) {
+  /* Header and Navigation adjustments */
+  .icon{
+    display: block;
+  }
+  .nav-title {
+    display: block;
+    font-size: 45px;
+  }
+  .header {
+    position: static;
+    flex-direction: row;
+    align-items: center;
+  } 
+  .left-header {
+    z-index: 10;
+    position: absolute;
+    top: 150px;
+    right: 0;
+    height: 300vh;
+    background-color: #141414;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 1rem;
+  }
+
+  .left-header a {
+    font-size: 40px;
+    margin: 20px 0;
+  }
+  /* Header and Navigation adjustments END */
+  /* Container adjustments */
+  .container {
+    position: absolute;
+    right: 0;
+    height: auto;
+  }
+  .about-me{ 
+    display: flex;
+    position: absolute;
+    top: 500px;
+    right: 0;
+    margin: 1rem 0;
+    text-indent: 0;
+    max-width: 100%;
+    text-align: center;
+  }
+  .profile  {
+    display: flex;
+    position: absolute;
+    top: 0px;
+    left: 3rem;
+    width: fit-content;
+  }
+  .profile img{
+    height: 35vh;
+  }
+  
+  .cta{
+    height: auto;
+    margin-top: 12rem;
+    position: absolute;
+    right: 0;
+    left: 0;
+    gap: 20px;
+    top: 150vh;
+  }
+  .cta .btn{
+    font-size: 25px;
+    padding: 0.5rem 1rem;
+    width: fit-content;
+  }
+  .linkss {
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 200vh;
+    margin-top: 12rem;
   }
 }
 /* =========================
