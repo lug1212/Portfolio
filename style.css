@@ -44,7 +44,7 @@ body{
   text-decoration: none;
 }
 .header a img{
-  max-height: 100px;
+  height: 100px;
   padding: 5px;
   display: block;
 }
@@ -63,10 +63,10 @@ body{
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 .left-header a {
-  display: inline-flex;
-  align-items: center;
+  display: flex;
   justify-content: center;
   background-color: #1a1a40;
   font-size: 20px;
@@ -76,6 +76,7 @@ body{
   border-radius: 7%;
   padding: 15px;
   transition: all 0.2s ease-in-out;
+  flex-wrap: wrap;
 }
 .left-header a:hover {
   border-radius: 15%;
