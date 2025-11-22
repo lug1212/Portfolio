@@ -16,6 +16,7 @@ body{
   color: #ffeccc;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-top: 10%;
 }
 
 /* =========================
@@ -31,12 +32,16 @@ body{
    Header and Navigation (affects all pages)
    ========================= */
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(50px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffea5e;
+  background-color: rgb(255, 234, 94, 0.2);
   padding: 10px 20px;
-  border-bottom: 5px solid #141414;
+  z-index: 1000;
 }
 .header a{
   padding: 15px;
