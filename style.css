@@ -35,11 +35,10 @@ body{
   position: fixed;
   top: 0;
   width: 100%;
-  backdrop-filter: blur(50px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(255, 234, 94, 0.2);
+  background-color: rgb(255, 234, 94, 1);
   padding: 10px 20px;
   z-index: 1000;
 }
@@ -560,5 +559,6 @@ img { max-width: 100%; height: auto; display: block; }
   transform: scale(1.02);
   box-shadow: 0 18px 40px rgba(0,0,0,0.2);
 }
+
 
 /* End of stylesheet */
